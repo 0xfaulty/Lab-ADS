@@ -160,7 +160,7 @@ void timeTestArrays() {
 	time_t start, end;
 	start = clock();
 	for (int i = 0; i < testIterationsCount; ++i) {
-		*aArraySet&* bArraySet&* cArraySet & ~*dArraySet;
+		((*aArraySet | *bArraySet) & ~*cArraySet) | *dArraySet;
 	}
 	end = clock();
 	cout << "Массивы: " << difftime(end, start) / CLOCKS_PER_SEC << " с" << endl;
@@ -170,7 +170,7 @@ void timeTestLists() {
 	time_t start, end;
 	start = clock();
 	for (int i = 0; i < testIterationsCount; ++i) {
-		*aListSet&* bListSet&* cListSet & ~*dListSet;
+		((*aListSet | *bListSet) & ~*cListSet) | *dListSet;
 	}
 	end = clock();
 	cout << "Списки: " << difftime(end, start) / CLOCKS_PER_SEC << " с" << endl;
@@ -180,7 +180,7 @@ void timeTestUniversums() {
 	time_t start, end;
 	start = clock();
 	for (int i = 0; i < testIterationsCount; ++i) {
-		*aUniversumSet&* bUniversumSet&* cUniversumSet & ~*dUniversumSet;
+		((*aUniversumSet | *bUniversumSet) & ~*cUniversumSet) | *dUniversumSet;
 	}
 	end = clock();
 	cout << "Универсумы: " << difftime(end, start) / CLOCKS_PER_SEC << " с" << endl;
@@ -190,7 +190,7 @@ void timeTestWords() {
 	time_t start, end;
 	start = clock();
 	for (int i = 0; i < testIterationsCount; ++i) {
-		*aWordSet&* bWordSet&* cWordSet & ~*dWordSet;
+		((*aWordSet | *bWordSet) & ~*cWordSet) | *dWordSet;
 	}
 	end = clock();
 	cout << "Машинные слова: " << difftime(end, start) / CLOCKS_PER_SEC << " с" << endl;
@@ -213,10 +213,10 @@ int main() {
 	cin >> choice;
 
 	if (choice == 'c') {
-		aS = "ABCabc";
-		bS = "ADEade";
-		cS = "CcDd";
-		dS = "AXYZ";
+		aS = "АБВабв";
+		bS = "БГДагд";
+		cS = "ВДвд";
+		dS = "АЭЮЯ";
 	}
 	else if (choice == 'i') {
 		aS = inputBuffer('A');

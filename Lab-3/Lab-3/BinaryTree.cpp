@@ -53,12 +53,12 @@ int BinaryTree::fillBuffersAndGetIndex(Node* currentNode, string buffers[], int&
 			right = currentNode->right;
 		}
 
-		int tmp = 0;
+		int position = 0;
 
-		tmp = fillBuffersAndGetIndex(left, buffers, lastDepthCounter, currentDepth + 1, width);
-		tmp += fillBuffersAndGetIndex(right, buffers, lastDepthCounter, currentDepth + 1, width);
+		position = fillBuffersAndGetIndex(left, buffers, lastDepthCounter, currentDepth + 1, width);
+		position += fillBuffersAndGetIndex(right, buffers, lastDepthCounter, currentDepth + 1, width);
 
-		index = tmp / 2;
+		index = position / 2;
 
 		if (currentNode) {
 			buffers[currentDepth - 1][index] = currentNode->data;
