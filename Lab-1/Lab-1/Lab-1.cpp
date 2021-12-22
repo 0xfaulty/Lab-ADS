@@ -14,11 +14,11 @@ list<char>* aL, * bL, * cL, * dL, * eL;
 int* aU, * bU, * cU, * dU, * eU;
 long long aW, bW, cW, dW, eW;
 
-bool isAlphabetLetter(char character) {
+bool isAlphabetLetter(char character) {                                                      //Проверка алфавита
 	return (character >= 'А' && character <= 'Я') || (character >= 'а' && character <= 'я');
 }
 
-list<char>* stringToList(const string& str) {
+list<char>* stringToList(const string& str) {                                                //Добавление к списку
 	list<char>* result = new list<char>();
 	for (char c : str) {
 		result->push_back(c);
@@ -40,7 +40,7 @@ int* stringToUniversum(const string& str) {
 	return result;
 }
 
-long long stringToWord(const string& str) {
+long long stringToWord(const string& str) {                                                    //Побитовый массив
 	long long result = 0;
 	for (int i = 0; i < str.length(); ++i) {
 		for (int j = 0; j < alphabet.length(); ++j) {
