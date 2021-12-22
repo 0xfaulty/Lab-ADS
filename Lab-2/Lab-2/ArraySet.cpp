@@ -70,7 +70,7 @@ ArraySet ArraySet::operator&(const ArraySet& other) const {
 	}
 	buffer[counter] = '\0';
 	sortArray(buffer, counter);
-	ArraySet result = *new ArraySet(buffer, alphabet);
+	ArraySet result = ArraySet(buffer, alphabet);
 	return result;
 }
 
@@ -87,7 +87,7 @@ ArraySet ArraySet::operator|(const ArraySet& other) const {
 	}
 	buffer[counter] = '\0';
 	sortArray(buffer, counter);
-	ArraySet result = *new ArraySet(buffer, alphabet);
+	ArraySet result = ArraySet(buffer, alphabet);
 	return result;
 }
 
@@ -100,6 +100,6 @@ ArraySet ArraySet::operator~() const {
 		}
 	}
 	buffer[counter] = '\0';
-	ArraySet result = *new ArraySet(buffer, alphabet);
+	ArraySet result = ArraySet(buffer, alphabet);
 	return result;
 }

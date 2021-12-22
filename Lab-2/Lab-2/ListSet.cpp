@@ -172,5 +172,5 @@ ListSet ListSet::operator~() const {
 			buffer[counter++] = alphabet[i];
 		}
 	}
-	return *new ListSet(buffer, alphabet);
+	return ListSet(buffer, alphabet);
 }
