@@ -95,7 +95,7 @@ int main() {
 		}
 		else if (command == REMOVE_COMMAND) {
 			if (graph) {
-				cout << "Введите через пробел первое и второе рёбра: ";
+				cout << "Введите через пробел первую и вторую вершины: ";
 
 				int firstVertex, lastVertex;
 				cin >> firstVertex >> lastVertex;
