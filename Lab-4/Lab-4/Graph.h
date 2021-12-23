@@ -9,23 +9,23 @@
 using namespace std;
 
 class Graph {
- private:
-  int vertexCount_;
-  int **edges_;
+private:
+	int vertexCount_;
+	int** edges_;
 
-  Graph(){};
-  Graph(int vertexCount);
+	Graph() {};
+	Graph(int vertexCount);
 
- public:
-  ~Graph();
+public:
+	~Graph();
 
-  static Graph *create(int vertexCount);
+	static Graph* create(int vertexCount);
 
-  void clear();
-  void show();
-  void addEdge(int firstVertex, int lastVertex);
-  void removeEdge(int firstVertex, int lastVertex);
-  bool checkLink(int vertexFrom, int vertexTo, bool* checkedVertices = nullptr);
-  void findComponent(int vertex, bool* checkedVertices);
-  void compute();
+	void clear();
+	void show();
+	void addEdge(int firstVertex, int lastVertex);
+	void removeEdge(int firstVertex, int lastVertex);
+	bool checkLink(int vertexFrom, int vertexTo, bool* checkedVertices = nullptr);
+	void findComponent(int vertex, bool* checkedVertices);
+	void compute();
 };
