@@ -62,11 +62,12 @@ string generateBuffer(char tag, int seed) {
 
 void filterString(string& str) {
 	int nullCount = 0;
-	for (int i = 0; i < str.length(); ++i) {
+	for (int i = 0; i < str.length(); i++) {
 		if (isAlphabetLetter(str[i])) {
-			for (int j = i + 1; j < str.length(); ++j) {
+			for (int j = i + 1; j < str.length(); j++) {
 				if (str[i] == str[j]) {
 					str[j] = '0';
+					++nullCount;
 				}
 			}
 		}
@@ -76,9 +77,9 @@ void filterString(string& str) {
 		}
 	}
 
-	for (int i = 0; i < str.length(); ++i) {
+	for (int i = 0; i < str.length(); i++) {
 		if (str[i] == '0') {
-			for (int j = i + 1; j < str.length(); ++j) {
+			for (int j = i + 1; j < str.length(); j++) {
 				if (str[j] != '0') {
 					str[i] = str[j];
 					str[j] = '0';

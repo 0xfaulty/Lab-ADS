@@ -106,8 +106,8 @@ void BinaryTree::add(const string& word) {
 				currentDepth++;
 				if (currentDepth > depth_) {
 					depth_ = currentDepth;
-					currentDepth = 1;
 				}
+				currentDepth = 1;
 			}
 			else {
 				current = current->left;
@@ -122,8 +122,8 @@ void BinaryTree::add(const string& word) {
 				currentDepth++;
 				if (currentDepth > depth_) {
 					depth_ = currentDepth;
-					currentDepth = 1;
 				}
+				currentDepth = 1;
 			}
 			else {
 				current = current->right;

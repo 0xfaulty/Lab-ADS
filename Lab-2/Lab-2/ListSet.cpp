@@ -154,7 +154,7 @@ ListSet ListSet::operator|(const ListSet& other) const {
 	if (counter > 0) {
 		result.head = new Node(buffer[0]);
 		Node* current = result.head;
-		for (int i = 1; i < result.size; ++i) {
+		for (int i = 1; i < result.size; i++) {
 			current->next = new Node(buffer[i]);
 			current = current->next;
 		}
@@ -167,7 +167,7 @@ ListSet ListSet::operator|(const ListSet& other) const {
 ListSet ListSet::operator~() const {
 	char* buffer = new char[alphabet.length() - size];
 	int counter = 0;
-	for (int i = 0; i < alphabet.length(); ++i) {
+	for (int i = 0; i < alphabet.length(); i++) {
 		if (!contains(alphabet[i])) {
 			buffer[counter++] = alphabet[i];
 		}
